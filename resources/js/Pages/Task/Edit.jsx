@@ -47,7 +47,7 @@ export default function Create({ auth, task, projects, users }) {
             >
               {task.image_path && (
                 <div className="mb-4">
-                  <img src="/project-image.jpg" className="w-64" />
+                  <img src={task.image_path} className="w-64" />
                 </div>
               )}
               <div>

@@ -218,7 +218,7 @@ export default function Index({ auth, projects, queryParams = null, success }) {
                                                 </td>
                                                 <td className="px-3 py-2">
                                                     <img
-                                                        src="/project-image.jpg"
+                                                        src={project.image_path || "/project-image.jpg"}
                                                         style={{ width: 60 }}
                                                     />
                                                 </td>

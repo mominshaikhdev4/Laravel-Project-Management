@@ -30,7 +30,7 @@ export default function Show({ auth, task }) {
           <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div>
               <img
-                src="/project-image.jpg"
+                src={task.image_path || "/project-image.jpg"}
                 alt=""
                 className="w-full h-64 object-cover"
               />

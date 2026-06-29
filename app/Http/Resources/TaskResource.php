@@ -24,7 +24,7 @@ class TaskResource extends JsonResource
             'name' => $this->name,
             'description' => $this->description,
             'created_at' => (new Carbon($this->created_at))->format('Y-m-d'),
-            'due_date' => (new Carbon($this->due_date))->format('Y-m-d'),
+            'due_date' => $this->due_date ? (new Carbon($this->due_date))->format('Y-m-d') : null,
             'status' => $this->status,
             'priority' => $this->priority,
             'image_path' => $this->image_path && !(str_starts_with($this->image_path, 'http')) ?

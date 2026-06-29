@@ -29,11 +29,10 @@ export default function Show({ auth, success, project, tasks, queryParams }) {
           <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div>
               <img
-                src="/project-image.jpg"
+                src={project.image_path || "/project-image.jpg"}
                 alt=""
                 className="w-full h-64 object-cover"
               />
-             
             </div>
             <div className="p-6 text-gray-900 dark:text-gray-100">
               <div className="grid gap-1 grid-cols-2 mt-2">
@@ -99,6 +98,8 @@ export default function Show({ auth, success, project, tasks, queryParams }) {
                 success={success}
                 queryParams={queryParams}
                 hideProjectColumn={true}
+                routeName="project.show"
+                routeParams={project.id}
               />
             </div>
           </div>

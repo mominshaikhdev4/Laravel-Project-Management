@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\UserCrudResource;
 use App\Models\User;
+use App\Models\Task;
+use App\Http\Resources\TaskResource;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 
@@ -51,7 +53,7 @@ class UserController extends Controller
     public function store(StoreUserRequest $request)
     {
         $data = $request->validated();
-        $data['email_verified_at'] = time();
+        $data['email_verified_at'] = now();
         $data['password'] = bcrypt($data['password']);
         User::create($data);
 
@@ -59,12 +61,29 @@ class UserController extends Controller
             ->with('success', 'User was created');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(User $user)
     {
-        //
+        $query = Task::query()->where('assigned_user_id', $user->id);
+
+        $sortField = request("sort_field", 'created_at');
+        $sortDirection = request("sort_direction", "desc");
+
+        if (request("name")) {
+            $query->where("name", "like", "%" . request("name") . "%");
+        }
+        if (request("status")) {
+            $query->where("status", request("status"));
+        }
+
+        $tasks = $query->orderBy($sortField, $sortDirection)
+            ->paginate(10)
+            ->onEachSide(1);
+
+        return inertia('User/Show', [
+            'user' => new UserCrudResource($user),
+            "tasks" => TaskResource::collection($tasks),
+            'queryParams' => request()->query() ?: null,
+        ]);
     }
 
     /**

@@ -10,6 +10,8 @@ export default function TasksTable({
   success,
   queryParams = null,
   hideProjectColumn = false,
+  routeName = "task.index",
+  routeParams = {},
 }) {
   queryParams = queryParams || {};
   const searchFieldChanged = (name, value) => {
@@ -19,7 +21,7 @@ export default function TasksTable({
       delete queryParams[name];
     }
 
-    router.get(route("task.index"), queryParams);
+    router.get(route(routeName, routeParams), queryParams);
   };
 
   const onKeyPress = (name, e) => {
@@ -39,7 +41,7 @@ export default function TasksTable({
       queryParams.sort_field = name;
       queryParams.sort_direction = "asc";
     }
-    router.get(route("task.index"), queryParams);
+    router.get(route(routeName, routeParams), queryParams);
   };
 
   const deleteTask = (task) => {
@@ -151,7 +153,7 @@ export default function TasksTable({
               >
                 <td className="px-3 py-2">{task.id}</td>
                 <td className="px-3 py-2">
-                  <img src="/project-image.jpg" style={{ width: 60 }} />
+                  <img src={task.image_path || "/project-image.jpg"} style={{ width: 60 }} />
                 </td>
                 {!hideProjectColumn && (
                   <td className="px-3 py-2">{task.project.name}</td>
