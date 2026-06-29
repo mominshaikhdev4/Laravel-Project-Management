@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../wayfinder'
 /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::login
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:19
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::login
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:47
  * @route '/login'
  */
 export const login = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -15,8 +15,8 @@ login.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::login
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:19
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::login
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:47
  * @route '/login'
  */
 login.url = (options?: RouteQueryOptions) => {
@@ -24,8 +24,8 @@ login.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::login
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:19
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::login
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:47
  * @route '/login'
  */
 login.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -33,8 +33,8 @@ login.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::login
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:19
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::login
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:47
  * @route '/login'
  */
 login.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -43,8 +43,8 @@ login.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::login
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:19
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::login
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:47
  * @route '/login'
  */
     const loginForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -53,8 +53,8 @@ login.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::login
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:19
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::login
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:47
  * @route '/login'
  */
         loginForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -62,8 +62,8 @@ login.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::login
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:19
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::login
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:47
  * @route '/login'
  */
         loginForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -78,8 +78,8 @@ login.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     
     login.form = loginForm
 /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::logout
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:42
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::logout
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:100
  * @route '/logout'
  */
 export const logout = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -93,8 +93,8 @@ logout.definition = {
 } satisfies RouteDefinition<["post"]>
 
 /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::logout
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:42
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::logout
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:100
  * @route '/logout'
  */
 logout.url = (options?: RouteQueryOptions) => {
@@ -102,8 +102,8 @@ logout.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::logout
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:42
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::logout
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:100
  * @route '/logout'
  */
 logout.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -112,8 +112,8 @@ logout.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 })
 
     /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::logout
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:42
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::logout
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:100
  * @route '/logout'
  */
     const logoutForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -122,8 +122,8 @@ logout.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     })
 
             /**
-* @see \App\Http\Controllers\Auth\AuthenticatedSessionController::logout
- * @see app/Http/Controllers/Auth/AuthenticatedSessionController.php:42
+* @see \Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::logout
+ * @see vendor/laravel/fortify/src/Http/Controllers/AuthenticatedSessionController.php:100
  * @route '/logout'
  */
         logoutForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -133,8 +133,8 @@ logout.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     
     logout.form = logoutForm
 /**
-* @see \App\Http\Controllers\Auth\RegisteredUserController::register
- * @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::register
+ * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:41
  * @route '/register'
  */
 export const register = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -148,8 +148,8 @@ register.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\Auth\RegisteredUserController::register
- * @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::register
+ * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:41
  * @route '/register'
  */
 register.url = (options?: RouteQueryOptions) => {
@@ -157,8 +157,8 @@ register.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see \App\Http\Controllers\Auth\RegisteredUserController::register
- * @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::register
+ * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:41
  * @route '/register'
  */
 register.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -166,8 +166,8 @@ register.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
-* @see \App\Http\Controllers\Auth\RegisteredUserController::register
- * @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::register
+ * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:41
  * @route '/register'
  */
 register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -176,8 +176,8 @@ register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
-* @see \App\Http\Controllers\Auth\RegisteredUserController::register
- * @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::register
+ * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:41
  * @route '/register'
  */
     const registerForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -186,8 +186,8 @@ register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
-* @see \App\Http\Controllers\Auth\RegisteredUserController::register
- * @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::register
+ * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:41
  * @route '/register'
  */
         registerForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -195,8 +195,8 @@ register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
-* @see \App\Http\Controllers\Auth\RegisteredUserController::register
- * @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see \Laravel\Fortify\Http\Controllers\RegisteredUserController::register
+ * @see vendor/laravel/fortify/src/Http/Controllers/RegisteredUserController.php:41
  * @route '/register'
  */
         registerForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({

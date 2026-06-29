@@ -1,12 +1,10 @@
-import Auth from './Auth'
 import DashboardController from './DashboardController'
 import ProjectController from './ProjectController'
 import TaskController from './TaskController'
 import UserController from './UserController'
 import ProfileController from './ProfileController'
 const Controllers = {
-    Auth: Object.assign(Auth, Auth),
-DashboardController: Object.assign(DashboardController, DashboardController),
+    DashboardController: Object.assign(DashboardController, DashboardController),
 ProjectController: Object.assign(ProjectController, ProjectController),
 TaskController: Object.assign(TaskController, TaskController),
 UserController: Object.assign(UserController, UserController),
