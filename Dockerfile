@@ -11,7 +11,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y --no-install-recommends nodejs \
     && corepack enable \
-    && corepack prepare pnpm@11 --activate \
+    && corepack prepare pnpm@9 --activate \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www
