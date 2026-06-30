@@ -21,10 +21,10 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader --no-interaction \
     && pnpm install --frozen-lockfile \
     && pnpm build \
-    && php artisan route:cache \
-    && php artisan view:cache \
-    && php artisan storage:link
+    && mkdir -p storage/framework/{sessions,views,cache} storage/logs storage/app/public bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache \
+    && chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"]
+CMD ["sh", "-c", "php artisan config:clear && php artisan route:cache && php artisan view:cache && php artisan storage:link && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"]
